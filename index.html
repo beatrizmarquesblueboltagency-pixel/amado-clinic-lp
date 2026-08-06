@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tratamentos Faciais Premium em Lisboa | Amado Clinic</title>
+<meta name="description" content="Medicina estética facial de precisão, conduzida por equipa médica certificada pela Ordem dos Médicos. Avaliação médica sem compromisso, no coração de Lisboa.">
+<meta property="og:title" content="Amado Clinic | Tratamentos Faciais de Precisão">
+<meta property="og:description" content="Firmeza, luminosidade e harmonia facial. Protocolos 100% personalizados por equipa médica certificada.">
+<meta property="og:image" content="hero-clinic.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F2EA;
+    --cream-2:#EFE6D6;
+    --paper:#FBF8F3;
+    --ink:#211D18;
+    --ink-soft:#4A443C;
+    --bronze:#A9743E;
+    --bronze-light:#CDA06A;
+    --bronze-dark:#7C5527;
+    --line:rgba(33,29,24,0.12);
+    --glass-bg:rgba(255,255,255,0.14);
+    --glass-bg-strong:rgba(255,255,255,0.55);
+    --glass-border:rgba(255,255,255,0.35);
+    --shadow-soft: 0 20px 60px rgba(33,29,24,0.12);
+    --shadow-lift: 0 30px 80px rgba(33,29,24,0.22);
+    --serif: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
+  body{
+    font-family:var(--sans);
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    max-width:100%;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;}
+  .container{max-width:1220px;margin:0 auto;padding:0 32px;}
+  section{position:relative;}
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:12.5px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--bronze-dark);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:'';width:26px;height:1px;background:var(--bronze);display:inline-block;}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-0.01em;color:var(--ink);}
+  h2{font-size:clamp(30px,4vw,46px);line-height:1.12;font-weight:400;}
+  h3{font-size:22px;font-weight:500;}
+  p{color:var(--ink-soft);}
+  .lede{font-size:18px;color:var(--ink-soft);max-width:560px;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:17px 34px;
+    border-radius:2px;
+    font-size:13.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:600;
+    transition:all .35s cubic-bezier(.2,.8,.2,1);
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,#C89A62,var(--bronze-dark));
+    color:#fff;
+    box-shadow:0 14px 34px rgba(124,85,39,0.35);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(124,85,39,0.45);}
+  .btn-ghost{
+    background:var(--glass-bg);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    color:#fff;
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,0.24);}
+  .btn-dark{
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .btn-dark:hover{background:#000;transform:translateY(-2px);}
+  .btn-block{width:100%;white-space:normal;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    padding:22px 0;
+    transition:all .45s cubic-bezier(.2,.8,.2,1);
+  }
+  header .container{display:flex;align-items:center;justify-content:space-between;}
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    width:100%;
+    padding:12px 22px;
+    border-radius:100px;
+    border:1px solid rgba(255,255,255,0.22);
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    transition:all .45s cubic-bezier(.2,.8,.2,1);
+  }
+  header.scrolled{padding:14px 0;}
+  header.scrolled .header-inner{
+    background:rgba(251,248,243,0.82);
+    border-color:rgba(33,29,24,0.08);
+    box-shadow:0 10px 40px rgba(33,29,24,0.08);
+  }
+  .logo{
+    font-family:var(--serif);
+    font-size:21px;
+    letter-spacing:.05em;
+    color:#fff;
+    transition:color .4s;
+    display:flex; flex-direction:column; line-height:1;
+  }
+  .logo small{font-family:var(--sans);font-size:9px;letter-spacing:.3em;color:rgba(255,255,255,0.7);margin-top:4px;font-weight:500;}
+  header.scrolled .logo{color:var(--ink);}
+  header.scrolled .logo small{color:var(--bronze-dark);}
+  nav{display:flex;gap:30px;}
+  nav a{
+    font-size:13px;letter-spacing:.05em;color:rgba(255,255,255,0.92);font-weight:500;
+    transition:color .3s;position:relative;white-space:nowrap;
+  }
+  header.scrolled nav a{color:var(--ink-soft);}
+  nav a:hover{color:var(--bronze-light);}
+  header.scrolled nav a:hover{color:var(--bronze);}
+  .header-cta{display:flex;align-items:center;gap:16px;}
+  .phone-link{
+    display:flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;color:#fff;letter-spacing:.02em;
+  }
+  header.scrolled .phone-link{color:var(--ink);}
+  .header-cta .btn{padding:12px 24px;font-size:11.5px;}
+  .nav-toggle{display:none;color:#fff;font-size:22px;}
+  header.scrolled .nav-toggle{color:var(--ink);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:140px;
+    padding-bottom:60px;
+  }
+  .hero-video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center 40%;z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(20,17,13,0.58) 0%, rgba(20,17,13,0.38) 35%, rgba(15,13,10,0.8) 100%);
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;z-index:1;
+    background:radial-gradient(ellipse at 20% 20%, rgba(201,160,106,0.18), transparent 55%);
+    pointer-events:none;
+  }
+  .hero-content{max-width:760px;position:relative;z-index:2;}
+  .hero .eyebrow{color:var(--bronze-light);}
+  .hero .eyebrow::before{background:var(--bronze-light);}
+  .hero h1{
+    color:#fff;
+    font-size:clamp(34px,4.6vw,56px);
+    line-height:1.14;
+    margin:18px 0 20px;
+    font-weight:400;
+    max-width:680px;
+  }
+  .hero .lede{color:rgba(255,255,255,0.86);font-size:19px;max-width:520px;margin-bottom:36px;}
+  .hero .lede strong{color:#fff;font-weight:600;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:34px;}
+  .hero-trust{display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+  .trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,0.9);font-size:13.5px;font-weight:500;}
+  .stars{color:#E4B15D;letter-spacing:2px;font-size:14px;}
+  .hero-note{
+    margin-top:26px;
+    display:inline-flex;gap:12px;align-items:flex-start;
+    padding:14px 18px;
+    background:var(--glass-bg);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(14px);
+    border-radius:4px;
+    max-width:480px;
+    font-size:13px;
+    color:rgba(255,255,255,0.88);
+  }
+
+  .proof-strip{
+    margin-top:30px;display:inline-flex;align-items:center;gap:14px;
+    color:rgba(255,255,255,0.85);font-size:12.5px;font-weight:600;letter-spacing:.03em;
+    transition:opacity .3s ease;
+  }
+  .proof-strip:hover{opacity:0.8;}
+  .proof-thumbs{display:flex;}
+  .proof-thumbs img{
+    width:40px;height:40px;border-radius:50%;object-fit:cover;
+    border:2px solid rgba(255,255,255,0.55);
+    margin-left:-12px;box-shadow:0 4px 12px rgba(0,0,0,0.35);
+  }
+  .proof-thumbs img:first-child{margin-left:0;}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    background:linear-gradient(180deg, var(--paper), var(--cream-2));
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .trust-strip .container{
+    display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;
+  }
+  .pill{
+    display:flex;align-items:center;gap:10px;
+    padding:10px 20px;
+    border:1px solid rgba(169,116,62,0.22);
+    border-radius:100px;
+    color:var(--ink-soft);
+    font-size:12.5px;letter-spacing:.03em;font-weight:500;
+    background:rgba(255,255,255,0.65);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 16px rgba(33,29,24,0.05);
+  }
+  .pill b{color:var(--bronze-dark);font-weight:700;}
+
+  /* ---------- SECTION SPACING ---------- */
+  .section{padding:120px 0;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{margin-top:16px;}
+  .section-head p{margin-top:18px;font-size:17px;}
+
+  /* ---------- WHY / GLASS CARDS ---------- */
+  .why{background:var(--paper);}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .glass-card{
+    background:linear-gradient(155deg, rgba(255,255,255,0.85), rgba(255,255,255,0.55));
+    border:1px solid rgba(255,255,255,0.6);
+    box-shadow:var(--shadow-soft);
+    border-radius:6px;
+    padding:34px 28px;
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .glass-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift);}
+  .glass-card .num{
+    font-family:var(--serif);font-size:15px;color:var(--bronze);
+    border:1px solid var(--bronze-light);width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .glass-card h3{margin-bottom:10px;font-size:19px;}
+  .glass-card p{font-size:14.5px;}
+
+  /* ---------- TREATMENTS ---------- */
+  .treatments{
+    background:linear-gradient(180deg, var(--cream-2), var(--cream));
+  }
+  .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .t-card{
+    background:linear-gradient(155deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5));
+    border:1px solid rgba(255,255,255,0.7);
+    border-radius:8px;
+    box-shadow:var(--shadow-soft);
+    backdrop-filter:blur(8px);
+    padding:38px 30px;
+    transition:transform .4s ease, box-shadow .4s ease;
+    position:relative;
+  }
+  .t-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift);}
+  .t-card .tag{font-size:11px;letter-spacing:.18em;color:var(--bronze);text-transform:uppercase;font-weight:700;}
+  .t-card h3{color:var(--ink);margin:16px 0 12px;font-size:21px;}
+  .t-card p{color:var(--ink-soft);font-size:14.5px;margin-bottom:22px;min-height:66px;}
+  .t-card .link{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--bronze-dark);display:inline-flex;align-items:center;gap:8px;}
+  .t-card .link:hover{gap:12px;}
+
+  /* ---------- RESULTS GALLERY ---------- */
+  .results{background:var(--paper);}
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .result-card{
+    border-radius:8px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow-soft);border:1px solid rgba(255,255,255,0.6);
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .result-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift);}
+  .result-card .img-wrap{aspect-ratio:4/5;overflow:hidden;}
+  .result-card img{width:100%;height:100%;object-fit:cover;}
+  .result-card .cap{padding:16px 18px;}
+  .result-card .cap .tag{font-size:10.5px;letter-spacing:.16em;color:var(--bronze);text-transform:uppercase;font-weight:700;}
+  .result-card .cap h4{font-family:var(--serif);font-size:16px;font-weight:500;margin-top:6px;color:var(--ink);}
+  .results-note{
+    text-align:center;margin-top:44px;font-size:13px;color:var(--ink-soft);
+  }
+
+  /* ---------- METHOD ---------- */
+  .method{background:var(--cream);}
+  .m-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;position:relative;}
+  .m-steps::before{
+    content:'';position:absolute;top:26px;left:12%;right:12%;height:1px;
+    background:repeating-linear-gradient(90deg, var(--bronze-light) 0 8px, transparent 8px 16px);
+  }
+  .m-step{position:relative;padding-top:0;}
+  .m-step .idx{
+    width:54px;height:54px;border-radius:50%;
+    background:var(--paper);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:20px;color:var(--bronze);
+    margin-bottom:24px;position:relative;z-index:2;
+    box-shadow:var(--shadow-soft);
+  }
+  .m-step h3{margin-bottom:12px;}
+  .m-step p{font-size:14.5px;}
+
+  /* ---------- STATS BAND ---------- */
+  .stats{
+    background:linear-gradient(180deg, var(--cream), var(--cream-2));
+    padding:80px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+  .stat-item .val{font-family:var(--serif);font-size:clamp(30px,4vw,48px);color:var(--bronze-dark);font-weight:400;}
+  .stat-item .label{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;font-weight:500;}
+
+  /* ---------- TEAM ---------- */
+  .team{background:var(--paper);}
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .team-card{text-align:left;}
+  .avatar{
+    width:100%;aspect-ratio:4/5;border-radius:6px;
+    background:linear-gradient(150deg, var(--cream-2), #E3D3B8);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:22px;position:relative;overflow:hidden;
+    box-shadow:var(--shadow-soft);
+  }
+  .avatar .mono{font-family:var(--serif);font-size:56px;color:rgba(124,85,39,0.4);}
+  .avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+  .avatar::after{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,0.4);border-radius:6px;}
+  .team-card h3{margin-bottom:4px;}
+  .team-card .role{color:var(--bronze-dark);font-size:13px;font-weight:600;letter-spacing:.03em;margin-bottom:10px;}
+  .team-card p.desc{font-size:14px;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi{background:var(--paper);}
+  .testi-row{display:flex;gap:22px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;}
+  .testi-row::-webkit-scrollbar{height:4px;}
+  .testi-row::-webkit-scrollbar-thumb{background:rgba(33,29,24,0.15);border-radius:4px;}
+  .testi-card{
+    min-width:340px;max-width:340px;scroll-snap-align:start;
+    background:linear-gradient(155deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5));
+    border:1px solid rgba(255,255,255,0.7);
+    box-shadow:var(--shadow-soft);
+    backdrop-filter:blur(8px);
+    border-radius:8px;padding:30px;
+  }
+  .testi-card .stars{margin-bottom:16px;display:block;}
+  .testi-card p{color:var(--ink-soft);font-size:14.5px;font-style:italic;margin-bottom:20px;min-height:120px;}
+  .testi-card .who{font-size:13px;font-weight:600;color:var(--ink);font-style:normal;}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--cream);}
+  .faq-wrap{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 4px;font-family:var(--serif);font-size:18px;font-weight:500;
+    cursor:pointer;
+  }
+  .faq-q .plus{font-size:22px;color:var(--bronze);transition:transform .35s ease;font-family:var(--sans);font-weight:300;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .faq-a p{padding:0 4px 24px;font-size:15px;max-width:640px;}
+
+  /* ---------- LOCATION ---------- */
+  .location{background:var(--paper);}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .loc-img{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lift);}
+  .loc-list{margin-top:26px;display:flex;flex-direction:column;gap:16px;}
+  .loc-list li{display:flex;gap:14px;font-size:15px;color:var(--ink-soft);align-items:flex-start;}
+  .loc-list b{color:var(--ink);}
+  .loc-dot{width:6px;height:6px;border-radius:50%;background:var(--bronze);margin-top:8px;flex-shrink:0;}
+
+  /* ---------- BOOKING / FORM ---------- */
+  .book{
+    background:linear-gradient(165deg, var(--cream-2), #E3D3B8 65%, var(--cream-2));
+    position:relative;overflow:hidden;
+  }
+  .book-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;min-width:0;position:relative;z-index:1;}
+  .book-grid > *{min-width:0;}
+  .book .lede{color:var(--ink-soft);}
+  .book-points{margin-top:30px;display:flex;flex-direction:column;gap:14px;}
+  .book-points li{display:flex;gap:12px;font-size:14.5px;color:var(--ink-soft);align-items:center;}
+  .check{
+    width:20px;height:20px;border-radius:50%;background:rgba(169,116,62,0.14);
+    display:flex;align-items:center;justify-content:center;color:var(--bronze-dark);font-size:12px;flex-shrink:0;
+  }
+  .form-card{
+    background:rgba(255,255,255,0.55);
+    border:1px solid rgba(255,255,255,0.8);
+    box-shadow:var(--shadow-lift);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    border-radius:14px;
+    padding:40px;
+  }
+  .form-card h3{color:var(--ink);margin-bottom:6px;}
+  .form-card .sub{color:var(--ink-soft);font-size:13.5px;margin-bottom:26px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;font-weight:600;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 16px;border-radius:6px;
+    background:rgba(255,255,255,0.7);
+    border:1px solid rgba(33,29,24,0.14);
+    color:var(--ink);font-size:14.5px;font-family:inherit;
+  }
+  .field input::placeholder,.field textarea::placeholder{color:rgba(33,29,24,0.35);}
+  .field select option{color:#111;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .form-note{font-size:12px;color:var(--ink-soft);margin-top:14px;text-align:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#161210;color:rgba(247,242,234,0.65);padding:64px 0 26px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+  .foot-logo{font-family:var(--serif);font-size:22px;color:#fff;margin-bottom:14px;}
+  footer h4{color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+  footer ul li{margin-bottom:10px;font-size:14px;}
+  footer ul li a:hover{color:var(--bronze-light);}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:24px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-size:12.5px;color:rgba(247,242,234,0.4);
+  }
+
+  /* ---------- FLOATING ELEMENTS ---------- */
+  .mobile-cta{
+    display:none;position:fixed;bottom:0;left:0;right:0;z-index:950;
+    padding:12px 16px;
+    background:rgba(251,248,243,0.92);
+    backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+    box-shadow:0 -8px 30px rgba(0,0,0,0.08);
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .t-grid{grid-template-columns:repeat(2,1fr);}
+    .results-grid{grid-template-columns:repeat(2,1fr);}
+    .team-grid{grid-template-columns:repeat(3,1fr);}
+    .book-grid{grid-template-columns:1fr;gap:44px;}
+    .loc-grid{grid-template-columns:1fr;gap:36px;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);row-gap:36px;}
+  }
+  @media (max-width:760px){
+    .container{padding:0 20px;}
+    nav{display:none;}
+    .phone-link{display:none;}
+    .header-inner{padding:9px 8px 9px 16px;}
+    .logo{font-size:14.5px;}
+    .logo small{display:none;}
+    .header-cta .btn{padding:10px 14px;font-size:9.5px;letter-spacing:.04em;}
+    .why-grid{grid-template-columns:1fr;}
+    .t-grid{grid-template-columns:1fr;}
+    .results-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto;}
+    .proof-strip{flex-direction:column;align-items:flex-start;gap:10px;}
+    .team-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto;}
+    .m-steps{grid-template-columns:1fr;gap:30px;}
+    .m-steps::before{display:none;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .field-row{grid-template-columns:1fr;}
+    .section{padding:80px 0;}
+    .hero{padding-bottom:120px;}
+    .mobile-cta{display:block;}
+    body{padding-bottom:0;}
+  }
+  @media (max-width:400px){
+    .btn{padding:15px 20px;font-size:12px;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#topo" class="logo">AMADO CLINIC<small>MEDICINA ESTÉTICA · LISBOA</small></a>
+      <nav>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#metodo">O Método</a>
+        <a href="#equipa">Equipa Médica</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+351911573701" class="phone-link">+351 911 573 701</a>
+        <a href="#marcar" class="btn btn-primary">Agendar Avaliação</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-clinic.jpg">
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Medicina Estética Facial · Lisboa</span>
+      <h1>Firmeza, luminosidade e harmonia facial, com o rigor de uma equipa médica de referência.</h1>
+      <p class="lede">Já sentiu que, noutras clínicas, era apenas mais um número na agenda? Na Amado Clinic, cada protocolo nasce de uma avaliação médica individual, conduzida por especialistas que tratam a sua pele como única. Este é o padrão de uma clínica verdadeiramente premium.</p>
+      <div class="hero-ctas">
+        <a href="#marcar" class="btn btn-primary">Agendar Avaliação Médica</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="stars">★★★★★</span> 4,7/5 Google</div>
+        <div class="trust-item">+400 pacientes acompanhadas</div>
+        <div class="trust-item">Certificados · Ordem dos Médicos</div>
+      </div>
+      <div class="hero-note">
+        <span>◆</span>
+        <span>Por rigor clínico, limitamos o número de avaliações por semana, para garantir atenção exclusiva a cada paciente.</span>
+      </div>
+
+      <a href="#resultados" class="proof-strip">
+        <div class="proof-thumbs">
+          <img src="resultado-labios-olhos-01.jpg" alt="Resultado real de paciente">
+          <img src="resultado-toxina-01.jpg" alt="Resultado real de paciente">
+          <img src="resultado-labial-03.jpg" alt="Resultado real de paciente">
+          <img src="resultado-nasal-01.jpg" alt="Resultado real de paciente">
+        </div>
+        <span>Ver resultados reais de pacientes ↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="container">
+    <span class="pill">Certificados pela <b>Ordem dos Médicos</b></span>
+    <span class="pill">Licença <b>ERS 21417/2022</b></span>
+    <span class="pill">Protocolos <b>Biologique Recherche</b></span>
+    <span class="pill"><b>4,7/5</b> · +400 Avaliações Google</span>
+  </div>
+</div>
+
+<section class="section why" id="porque">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Porque a Amado Clinic</span>
+      <h2>Uma abordagem clínica, não comercial, à sua beleza.</h2>
+      <p>Não vendemos tratamentos. Diagnosticamos, desenhamos um plano e acompanhamos cada etapa com rigor médico.</p>
+    </div>
+    <div class="why-grid">
+      <div class="glass-card reveal">
+        <div class="num">01</div>
+        <h3>Avaliação sem compromisso</h3>
+        <p>Não propomos nada antes de perceber o seu caso. O processo começa sempre pela avaliação médica.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="num">02</div>
+        <h3>Equipa 100% médica</h3>
+        <p>Cada avaliação é feita por médicos especialistas com registo na Ordem dos Médicos, nunca por assistentes.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="num">03</div>
+        <h3>Protocolo à sua medida</h3>
+        <p>Nenhum tratamento é padronizado. É desenhado a partir da sua pele, estrutura facial e objetivos.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="num">04</div>
+        <h3>Discrição e exclusividade</h3>
+        <p>No coração de Lisboa, um espaço privado, pensado para quem valoriza privacidade e excelência clínica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section treatments" id="tratamentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tratamentos Faciais</span>
+      <h2>Protocolos de precisão para cada objetivo.</h2>
+      <p>Selecionados e combinados na sua avaliação médica, nunca aplicados de forma isolada ou padronizada.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <span class="tag">Estrutura</span>
+        <h3>Harmonização Facial</h3>
+        <p>Equilíbrio e simetria natural dos traços, respeitando sempre a sua identidade e anatomia.</p>
+        <a href="#marcar" class="link">Marcar Avaliação →</a>
+      </div>
+      <div class="t-card reveal">
+        <span class="tag">Expressão</span>
+        <h3>Toxina Botulínica</h3>
+        <p>Suaviza linhas de expressão com resultado natural, progressivo e imperceptível.</p>
+        <a href="#marcar" class="link">Marcar Avaliação →</a>
+      </div>
+      <div class="t-card reveal">
+        <span class="tag">Volume</span>
+        <h3>Ácido Hialurónico</h3>
+        <p>Devolve volume, contorno e hidratação profunda exatamente onde a pele mais precisa.</p>
+        <a href="#marcar" class="link">Marcar Avaliação →</a>
+      </div>
+      <div class="t-card reveal">
+        <span class="tag">Lifting</span>
+        <h3>Ultraformer III</h3>
+        <p>Lifting facial não cirúrgico com tecnologia HIFU de última geração, sem tempo de paragem.</p>
+        <a href="#marcar" class="link">Marcar Avaliação →</a>
+      </div>
+      <div class="t-card reveal">
+        <span class="tag">Firmeza</span>
+        <h3>Endymed Pro</h3>
+        <p>Radiofrequência de precisão para firmeza da pele e produção natural de colagénio.</p>
+        <a href="#marcar" class="link">Marcar Avaliação →</a>
+      </div>
+      <div class="t-card reveal">
+        <span class="tag">Luminosidade</span>
+        <h3>Skinboosters &amp; Bio-revitalização</h3>
+        <p>Qualidade de pele a partir do interior, com protocolos clínicos Biologique Recherche.</p>
+        <a href="#marcar" class="link">Marcar Avaliação →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section results" id="resultados">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Resultados Reais</span>
+      <h2>Resultados que falam por si.</h2>
+      <p>Casos reais de pacientes Amado Clinic. Sem filtros, sem exageros, apenas o que a medicina estética de precisão consegue fazer.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="img-wrap"><img src="resultado-labios-olhos-01.jpg" alt="Resultado real: harmonização facial"></div>
+        <div class="cap"><span class="tag">Caso 01</span><h4>Harmonização Facial</h4></div>
+      </div>
+      <div class="result-card reveal">
+        <div class="img-wrap"><img src="resultado-toxina-01.jpg" alt="Resultado real: toxina botulínica"></div>
+        <div class="cap"><span class="tag">Caso 02</span><h4>Toxina Botulínica</h4></div>
+      </div>
+      <div class="result-card reveal">
+        <div class="img-wrap"><img src="resultado-labial-03.jpg" alt="Resultado real: preenchimento labial"></div>
+        <div class="cap"><span class="tag">Caso 03</span><h4>Ácido Hialurónico · Lábios</h4></div>
+      </div>
+      <div class="result-card reveal">
+        <div class="img-wrap"><img src="resultado-nasal-01.jpg" alt="Resultado real: preenchimento nasal"></div>
+        <div class="cap"><span class="tag">Caso 04</span><h4>Ácido Hialurónico · Nariz</h4></div>
+      </div>
+      <div class="result-card reveal">
+        <div class="img-wrap"><img src="resultado-olheiras-01.jpg" alt="Resultado real: harmonização facial"></div>
+        <div class="cap"><span class="tag">Caso 05</span><h4>Harmonização Facial</h4></div>
+      </div>
+      <div class="result-card reveal">
+        <div class="img-wrap"><img src="resultado-labial-02.jpg" alt="Resultado real: preenchimento labial"></div>
+        <div class="cap"><span class="tag">Caso 06</span><h4>Ácido Hialurónico · Lábios</h4></div>
+      </div>
+    </div>
+    <p class="results-note reveal">Fotografias reais de pacientes, cedidas para fins de divulgação clínica.</p>
+  </div>
+</section>
+
+<section class="section method" id="metodo">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">O Método Amado</span>
+      <h2>Três etapas. Nenhuma pressa.</h2>
+    </div>
+    <div class="m-steps">
+      <div class="m-step reveal">
+        <div class="idx">01</div>
+        <h3>Avaliação Médica</h3>
+        <p>Analisamos a sua pele, estrutura facial e objetivos, sem qualquer compromisso de tratamento.</p>
+      </div>
+      <div class="m-step reveal">
+        <div class="idx">02</div>
+        <h3>Protocolo Personalizado</h3>
+        <p>Desenhamos um plano exclusivo, com o número de sessões certo para o seu caso, nem mais nem menos.</p>
+      </div>
+      <div class="m-step reveal">
+        <div class="idx">03</div>
+        <h3>Acompanhamento Contínuo</h3>
+        <p>Cada etapa é acompanhada de perto pela mesma equipa médica, com ajustes sempre que necessário.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal"><div class="val">+400</div><div class="label">Pacientes Acompanhadas</div></div>
+      <div class="stat-item reveal"><div class="val">4,7/5</div><div class="label">Avaliação Google</div></div>
+      <div class="stat-item reveal"><div class="val">3</div><div class="label">Especialistas Médicos</div></div>
+      <div class="stat-item reveal"><div class="val">100%</div><div class="label">Protocolos Personalizados</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="section team" id="equipa">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Equipa Médica</span>
+      <h2>Quem vai cuidar da sua pele.</h2>
+      <p>Profissionais certificados, com experiência específica em cada área do rosto, não generalistas.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="avatar"><img src="dra-olena-averianova.jpg" alt="Olena Averianova"></div>
+        <h3>Olena Averianova</h3>
+        <div class="role">Facialista</div>
+        <p class="desc">Especialista em tratamentos de pele e protocolos de manutenção entre procedimentos médicos.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar"><img src="dr-andre-pinto.jpg" alt="Dr. André Pinto"></div>
+        <h3>Dr. André Pinto</h3>
+        <div class="role">Cirurgia Plástica · OMD 64369</div>
+        <p class="desc">Experiência em procedimentos de maior complexidade e reabilitação facial.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar"><img src="dra-cristina-iosipoi.jpg" alt="Dra. Cristina Iosipoi"></div>
+        <h3>Dra. Cristina Iosipoi</h3>
+        <div class="role">Harmonização Orofacial · OMD 15063</div>
+        <p class="desc">Especializada na zona inferior do rosto e equilíbrio da estrutura facial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section testi" id="testemunhos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Testemunhos</span>
+      <h2>Experiências de quem já confiou na Amado Clinic.</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="testi-row reveal">
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Ambiente fenomenal, equipa médica e receção espetaculares. Super acolhedor, todos os tratamentos muito bem explicados. Recomendo 100%."</p>
+        <div class="who">Helena Batista</div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Super profissional, rápido e indolor. Todos foram muito atenciosos e a comunicação antes e depois foi impecável. Já noto grande diferença."</p>
+        <div class="who">Rebecca Williams</div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Do início ao fim, a experiência foi impecável. Ao contrário de outras clínicas, esta tem uma abordagem completamente personalizada, focada nas minhas necessidades."</p>
+        <div class="who">Iy Takai</div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Estou encantada com os resultados naturais. Clínica incrível e muito profissional. Procedimento indolor e sem hematomas nos dias seguintes."</p>
+        <div class="who">A GERDuba</div>
+      </div>
+      <div class="testi-card">
+        <span class="stars">★★★★★</span>
+        <p>"Desde o primeiro contacto, o atendimento foi impecável. Tratamentos com muita delicadeza e profissionalismo. O resultado superou as minhas expectativas."</p>
+        <div class="who">Laís Coelho</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Perguntas Frequentes</span>
+      <h2>Sem surpresas. Sem promessas que não cumprimos.</h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item open">
+        <div class="faq-q"><span>A consulta obriga a fazer algum tratamento?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Não. A consulta existe para avaliar o seu caso e apresentar as opções disponíveis. Pode sair com toda a informação e decidir quando, e se, fizer sentido agendar o procedimento.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Os tratamentos são dolorosos?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>A maioria dos protocolos é minimamente invasiva e bem tolerada, com recurso a anestesia tópica quando aplicável. Na avaliação, explicamos exatamente o que sentirá em cada procedimento.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Quanto tempo demoram os resultados a aparecer?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Depende do tratamento escolhido, da condição da pele e do objetivo de cada pessoa. Alguns protocolos mostram efeitos desde os primeiros dias; outros trabalham em profundidade, com melhoria progressiva ao longo das semanas. Na avaliação inicial ficará a saber exatamente o que esperar.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Qual é o tempo de recuperação?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Varia por protocolo. A maioria permite retomar a rotina normal no próprio dia ou no dia seguinte. Este ponto é sempre esclarecido antes de qualquer procedimento ser agendado.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Qual é o investimento?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>O investimento varia consoante o protocolo definido na avaliação médica, pois cada plano é desenhado à medida. Na consulta, receberá um orçamento claro, sem surpresas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section location" id="localizacao">
+  <div class="container">
+    <div class="loc-grid">
+      <div class="loc-img reveal"><img src="hero-clinic.jpg" alt="Interior da Amado Clinic em Lisboa"></div>
+      <div class="reveal">
+        <span class="eyebrow">Localização</span>
+        <h2>No coração de Lisboa.</h2>
+        <p class="lede">Recebemo-la num ambiente discreto, elegante e moderno, pensado para expressar a sua beleza com privacidade.</p>
+        <ul class="loc-list">
+          <li><span class="loc-dot"></span><span><b>Morada:</b> Avenida Álvares Cabral, 25A, 1250-015 Lisboa</span></li>
+          <li><span class="loc-dot"></span><span><b>Estacionamento:</b> cortesia, a 50 metros da clínica</span></li>
+          <li><span class="loc-dot"></span><span><b>Contacto:</b> +351 911 573 701 · info@amadoclinic.pt</span></li>
+          <li><span class="loc-dot"></span><span><b>Licença:</b> ERS 21417/2022</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section book" id="marcar">
+  <div class="container">
+    <div class="book-grid">
+      <div class="reveal">
+        <span class="eyebrow">Agendar Avaliação</span>
+        <h2>Dê o primeiro passo, com uma equipa que trata a sua pele como um caso clínico, não uma tendência.</h2>
+        <p class="lede">Preencha os seus dados e a nossa equipa entrará em contacto para marcar a sua avaliação médica, sem qualquer compromisso.</p>
+        <ul class="book-points">
+          <li><span class="check">✓</span> Avaliação conduzida por médico especialista</li>
+          <li><span class="check">✓</span> Plano de tratamento 100% personalizado</li>
+          <li><span class="check">✓</span> Orçamento claro, sem surpresas</li>
+          <li><span class="check">✓</span> Vagas limitadas por semana</li>
+        </ul>
+      </div>
+      <div class="form-card reveal">
+        <h3>Marcar Avaliação Médica</h3>
+        <div class="sub">Resposta em menos de 24h úteis.</div>
+        <form id="bookingForm">
+          <div class="field">
+            <label for="fname">Nome completo</label>
+            <input type="text" id="fname" placeholder="O seu nome" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="fphone">Telemóvel</label>
+              <input type="tel" id="fphone" placeholder="+351 9xx xxx xxx" required>
+            </div>
+            <div class="field">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="oseuemail@exemplo.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="ftreat">Tratamento de interesse</label>
+            <select id="ftreat">
+              <option value="Avaliação Geral">Ainda não sei, quero avaliação geral</option>
+              <option value="Harmonização Facial">Harmonização Facial</option>
+              <option value="Toxina Botulínica">Toxina Botulínica</option>
+              <option value="Ácido Hialurónico">Ácido Hialurónico</option>
+              <option value="Ultraformer III">Ultraformer III</option>
+              <option value="Endymed Pro">Endymed Pro</option>
+              <option value="Skinboosters">Skinboosters &amp; Bio-revitalização</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Confirmar Marcação</button>
+          <div class="form-note">Resposta da nossa equipa em menos de 24h úteis, sem qualquer compromisso.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">AMADO CLINIC</div>
+        <p style="font-size:14px;max-width:280px;">Medicina estética facial de precisão, no coração de Lisboa. Rigor clínico é o nosso padrão.</p>
+      </div>
+      <div>
+        <h4>Clínica</h4>
+        <ul>
+          <li><a href="#porque">Porque a Amado</a></li>
+          <li><a href="#tratamentos">Tratamentos</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#equipa">Equipa Médica</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+351911573701">+351 911 573 701</a></li>
+          <li><a href="mailto:info@amadoclinic.pt">info@amadoclinic.pt</a></li>
+          <li>Av. Álvares Cabral, 25A<br>1250-015 Lisboa</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="#" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>ERS 21417/2022 · © Amado Clinic. Todos os direitos reservados.</span>
+      <span>Desenvolvido com rigor clínico e estratégia de conversão.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#marcar" class="btn btn-primary btn-block">Agendar Avaliação Médica</a>
+</div>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // pause hero video when off-screen
+  const heroVideo = document.querySelector('.hero-video');
+  if(heroVideo){
+    const vio = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting){ heroVideo.play().catch(()=>{}); } else { heroVideo.pause(); } });
+    }, { threshold: 0.05 });
+    vio.observe(heroVideo);
+  }
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // faq accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const a = item.querySelector('.faq-a');
+    if(item.classList.contains('open')){ a.style.maxHeight = a.scrollHeight + 'px'; }
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = 0; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+
+  // booking form -> thank-you page handoff
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const treat = document.getElementById('ftreat').value;
+    const params = new URLSearchParams({ nome: name, tel: phone, tratamento: treat });
+    if(email) params.set('email', email);
+    window.location.href = `obrigado.html?${params.toString()}`;
+  });
+</script>
+
+</body>
+</html>
