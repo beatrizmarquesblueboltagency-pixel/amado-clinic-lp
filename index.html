@@ -28,7 +28,10 @@
     --glass-border:rgba(255,255,255,0.35);
     --shadow-soft: 0 20px 60px rgba(33,29,24,0.12);
     --shadow-lift: 0 30px 80px rgba(33,29,24,0.22);
-    --serif: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    /* Heading font: brand spec is Acre Medium (Colophon Foundry, paid, not on Google Fonts).
+       Send the .woff2 files and add an @font-face rule above referencing 'Acre' to swap it in;
+       everything below already points at --heading so a single change here updates the whole site. */
+    --heading: 'Acre Medium', 'Acre', 'Fraunces', 'Iowan Old Style', Georgia, serif;
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
@@ -61,7 +64,7 @@
     gap:10px;
   }
   .eyebrow::before{content:'';width:26px;height:1px;background:var(--bronze);display:inline-block;}
-  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-0.01em;color:var(--ink);}
+  h1,h2,h3,h4{font-family:var(--heading);font-weight:500;letter-spacing:-0.01em;color:var(--ink);}
   h2{font-size:clamp(30px,4vw,46px);line-height:1.12;font-weight:400;}
   h3{font-size:22px;font-weight:500;}
   p{color:var(--ink-soft);}
@@ -103,29 +106,25 @@
   /* ---------- HEADER ---------- */
   header{
     position:fixed;top:0;left:0;right:0;z-index:1000;
-    padding:22px 0;
-    transition:all .45s cubic-bezier(.2,.8,.2,1);
   }
-  header .container{display:flex;align-items:center;justify-content:space-between;}
   .header-inner{
     display:flex;align-items:center;justify-content:space-between;
     width:100%;
-    padding:12px 22px;
-    border-radius:100px;
-    border:1px solid rgba(255,255,255,0.22);
-    background:rgba(255,255,255,0.08);
+    padding:20px 32px;
+    border-bottom:1px solid rgba(255,255,255,0.16);
+    background:rgba(255,255,255,0.06);
     backdrop-filter:blur(18px) saturate(140%);
     -webkit-backdrop-filter:blur(18px) saturate(140%);
     transition:all .45s cubic-bezier(.2,.8,.2,1);
   }
-  header.scrolled{padding:14px 0;}
   header.scrolled .header-inner{
-    background:rgba(251,248,243,0.82);
-    border-color:rgba(33,29,24,0.08);
-    box-shadow:0 10px 40px rgba(33,29,24,0.08);
+    padding:14px 32px;
+    background:rgba(251,248,243,0.86);
+    border-bottom-color:rgba(33,29,24,0.08);
+    box-shadow:0 10px 40px rgba(33,29,24,0.06);
   }
   .logo{
-    font-family:var(--serif);
+    font-family:var(--heading);
     font-size:21px;
     letter-spacing:.05em;
     color:#fff;
@@ -261,7 +260,7 @@
   }
   .glass-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift);}
   .glass-card .num{
-    font-family:var(--serif);font-size:15px;color:var(--bronze);
+    font-family:var(--heading);font-size:15px;color:var(--bronze);
     border:1px solid var(--bronze-light);width:38px;height:38px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;margin-bottom:20px;
   }
@@ -303,7 +302,7 @@
   .result-card img{width:100%;height:100%;object-fit:cover;}
   .result-card .cap{padding:16px 18px;}
   .result-card .cap .tag{font-size:10.5px;letter-spacing:.16em;color:var(--bronze);text-transform:uppercase;font-weight:700;}
-  .result-card .cap h4{font-family:var(--serif);font-size:16px;font-weight:500;margin-top:6px;color:var(--ink);}
+  .result-card .cap h4{font-family:var(--heading);font-size:16px;font-weight:500;margin-top:6px;color:var(--ink);}
   .results-note{
     text-align:center;margin-top:44px;font-size:13px;color:var(--ink-soft);
   }
@@ -320,7 +319,7 @@
     width:54px;height:54px;border-radius:50%;
     background:var(--paper);border:1px solid var(--line);
     display:flex;align-items:center;justify-content:center;
-    font-family:var(--serif);font-size:20px;color:var(--bronze);
+    font-family:var(--heading);font-size:20px;color:var(--bronze);
     margin-bottom:24px;position:relative;z-index:2;
     box-shadow:var(--shadow-soft);
   }
@@ -335,7 +334,7 @@
     border-bottom:1px solid var(--line);
   }
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
-  .stat-item .val{font-family:var(--serif);font-size:clamp(30px,4vw,48px);color:var(--bronze-dark);font-weight:400;}
+  .stat-item .val{font-family:var(--heading);font-size:clamp(30px,4vw,48px);color:var(--bronze-dark);font-weight:400;}
   .stat-item .label{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;font-weight:500;}
 
   /* ---------- TEAM ---------- */
@@ -349,7 +348,7 @@
     margin-bottom:22px;position:relative;overflow:hidden;
     box-shadow:var(--shadow-soft);
   }
-  .avatar .mono{font-family:var(--serif);font-size:56px;color:rgba(124,85,39,0.4);}
+  .avatar .mono{font-family:var(--heading);font-size:56px;color:rgba(124,85,39,0.4);}
   .avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;}
   .avatar::after{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,0.4);border-radius:6px;}
   .team-card h3{margin-bottom:4px;}
@@ -369,9 +368,19 @@
     backdrop-filter:blur(8px);
     border-radius:8px;padding:30px;
   }
-  .testi-card .stars{margin-bottom:16px;display:block;}
-  .testi-card p{color:var(--ink-soft);font-size:14.5px;font-style:italic;margin-bottom:20px;min-height:120px;}
-  .testi-card .who{font-size:13px;font-weight:600;color:var(--ink);font-style:normal;}
+  .testi-card p{color:var(--ink-soft);font-size:14.5px;font-style:italic;margin-bottom:0;min-height:110px;}
+  .g-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+  .g-avatar{
+    width:40px;height:40px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:15px;font-weight:600;font-family:var(--sans);
+  }
+  .g-meta{flex:1;min-width:0;}
+  .g-name{font-size:13.5px;font-weight:600;color:var(--ink);}
+  .g-sub{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-soft);margin-top:1px;}
+  .g-sub svg{width:13px;height:13px;flex-shrink:0;}
+  .g-stars{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+  .g-stars .stars{color:#FBBC04;font-size:14px;letter-spacing:1px;}
 
   /* ---------- FAQ ---------- */
   .faq{background:var(--cream);}
@@ -379,7 +388,7 @@
   .faq-item{border-bottom:1px solid var(--line);}
   .faq-q{
     display:flex;align-items:center;justify-content:space-between;
-    padding:26px 4px;font-family:var(--serif);font-size:18px;font-weight:500;
+    padding:26px 4px;font-family:var(--heading);font-size:18px;font-weight:500;
     cursor:pointer;
   }
   .faq-q .plus{font-size:22px;color:var(--bronze);transition:transform .35s ease;font-family:var(--sans);font-weight:300;}
@@ -434,20 +443,6 @@
   .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   .form-note{font-size:12px;color:var(--ink-soft);margin-top:14px;text-align:center;}
 
-  /* ---------- FOOTER ---------- */
-  footer{background:#161210;color:rgba(247,242,234,0.65);padding:64px 0 26px;}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
-  .foot-logo{font-family:var(--serif);font-size:22px;color:#fff;margin-bottom:14px;}
-  footer h4{color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
-  footer ul li{margin-bottom:10px;font-size:14px;}
-  footer ul li a:hover{color:var(--bronze-light);}
-  .foot-bottom{
-    border-top:1px solid rgba(255,255,255,0.08);
-    padding-top:24px;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
-    font-size:12.5px;color:rgba(247,242,234,0.4);
-  }
-
   /* ---------- FLOATING ELEMENTS ---------- */
   .mobile-cta{
     display:none;position:fixed;bottom:0;left:0;right:0;z-index:950;
@@ -476,7 +471,8 @@
     .container{padding:0 20px;}
     nav{display:none;}
     .phone-link{display:none;}
-    .header-inner{padding:9px 8px 9px 16px;}
+    .header-inner{padding:14px 20px;}
+    header.scrolled .header-inner{padding:12px 20px;}
     .logo{font-size:14.5px;}
     .logo small{display:none;}
     .header-cta .btn{padding:10px 14px;font-size:9.5px;letter-spacing:.04em;}
@@ -488,7 +484,6 @@
     .m-steps{grid-template-columns:1fr;gap:30px;}
     .m-steps::before{display:none;}
     .stats-grid{grid-template-columns:repeat(2,1fr);}
-    .foot-grid{grid-template-columns:1fr 1fr;}
     .field-row{grid-template-columns:1fr;}
     .section{padding:80px 0;}
     .hero{padding-bottom:120px;}
@@ -503,20 +498,18 @@
 <body>
 
 <header id="siteHeader">
-  <div class="container">
-    <div class="header-inner">
-      <a href="#topo" class="logo">AMADO CLINIC<small>MEDICINA ESTÉTICA · LISBOA</small></a>
-      <nav>
-        <a href="#tratamentos">Tratamentos</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#metodo">O Método</a>
-        <a href="#equipa">Equipa Médica</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <div class="header-cta">
-        <a href="tel:+351911573701" class="phone-link">+351 911 573 701</a>
-        <a href="#marcar" class="btn btn-primary">Agendar Avaliação</a>
-      </div>
+  <div class="header-inner">
+    <a href="#topo" class="logo">AMADO CLINIC<small>MEDICINA ESTÉTICA · LISBOA</small></a>
+    <nav>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#metodo">O Método</a>
+      <a href="#equipa">Equipa Médica</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+351911573701" class="phone-link">+351 911 573 701</a>
+      <a href="#marcar" class="btn btn-primary">Agendar Avaliação</a>
     </div>
   </div>
 </header>
@@ -760,29 +753,70 @@
   <div class="container">
     <div class="testi-row reveal">
       <div class="testi-card">
-        <span class="stars">★★★★★</span>
+        <div class="g-header">
+          <div class="g-avatar" style="background:#1E8E3E;">H</div>
+          <div class="g-meta">
+            <div class="g-name">Helena Batista</div>
+            <div class="g-sub"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>Avaliação no Google</div>
+          </div>
+        </div>
+        <div class="g-stars"><span class="stars">★★★★★</span></div>
         <p>"Ambiente fenomenal, equipa médica e receção espetaculares. Super acolhedor, todos os tratamentos muito bem explicados. Recomendo 100%."</p>
-        <div class="who">Helena Batista</div>
       </div>
       <div class="testi-card">
-        <span class="stars">★★★★★</span>
+        <div class="g-header">
+          <div class="g-avatar" style="background:#1A73E8;">R</div>
+          <div class="g-meta">
+            <div class="g-name">Rebecca Williams</div>
+            <div class="g-sub"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>Avaliação no Google</div>
+          </div>
+        </div>
+        <div class="g-stars"><span class="stars">★★★★★</span></div>
         <p>"Super profissional, rápido e indolor. Todos foram muito atenciosos e a comunicação antes e depois foi impecável. Já noto grande diferença."</p>
-        <div class="who">Rebecca Williams</div>
       </div>
       <div class="testi-card">
-        <span class="stars">★★★★★</span>
+        <div class="g-header">
+          <div class="g-avatar" style="background:#D93025;">I</div>
+          <div class="g-meta">
+            <div class="g-name">Iy Takai</div>
+            <div class="g-sub"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>Avaliação no Google · há 1 ano</div>
+          </div>
+        </div>
+        <div class="g-stars"><span class="stars">★★★★★</span></div>
         <p>"Do início ao fim, a experiência foi impecável. Ao contrário de outras clínicas, esta tem uma abordagem completamente personalizada, focada nas minhas necessidades."</p>
-        <div class="who">Iy Takai</div>
       </div>
       <div class="testi-card">
-        <span class="stars">★★★★★</span>
+        <div class="g-header">
+          <div class="g-avatar" style="background:#9334E6;">S</div>
+          <div class="g-meta">
+            <div class="g-name">Sandra Bedigis Rueda</div>
+            <div class="g-sub"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>Avaliação no Google · há 4 meses</div>
+          </div>
+        </div>
+        <div class="g-stars"><span class="stars">★★★★★</span></div>
+        <p>"Recebi uma massagem linfática na clínica e foi absolutamente incrível. O espaço é muito bonito e as pessoas são muito acolhedoras e atenciosas. Recomendo vivamente para qualquer tipo de tratamento."</p>
+      </div>
+      <div class="testi-card">
+        <div class="g-header">
+          <div class="g-avatar" style="background:#E52592;">A</div>
+          <div class="g-meta">
+            <div class="g-name">A GERDuba</div>
+            <div class="g-sub"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>Avaliação no Google</div>
+          </div>
+        </div>
+        <div class="g-stars"><span class="stars">★★★★★</span></div>
         <p>"Estou encantada com os resultados naturais. Clínica incrível e muito profissional. Procedimento indolor e sem hematomas nos dias seguintes."</p>
-        <div class="who">A GERDuba</div>
       </div>
       <div class="testi-card">
-        <span class="stars">★★★★★</span>
+        <div class="g-header">
+          <div class="g-avatar" style="background:#F9AB00;">L</div>
+          <div class="g-meta">
+            <div class="g-name">Laís Coelho</div>
+            <div class="g-sub"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>Avaliação no Google</div>
+          </div>
+        </div>
+        <div class="g-stars"><span class="stars">★★★★★</span></div>
         <p>"Desde o primeiro contacto, o atendimento foi impecável. Tratamentos com muita delicadeza e profissionalismo. O resultado superou as minhas expectativas."</p>
-        <div class="who">Laís Coelho</div>
       </div>
     </div>
   </div>
@@ -889,45 +923,6 @@
     </div>
   </div>
 </section>
-
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo">AMADO CLINIC</div>
-        <p style="font-size:14px;max-width:280px;">Medicina estética facial de precisão, no coração de Lisboa. Rigor clínico é o nosso padrão.</p>
-      </div>
-      <div>
-        <h4>Clínica</h4>
-        <ul>
-          <li><a href="#porque">Porque a Amado</a></li>
-          <li><a href="#tratamentos">Tratamentos</a></li>
-          <li><a href="#resultados">Resultados</a></li>
-          <li><a href="#equipa">Equipa Médica</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="tel:+351911573701">+351 911 573 701</a></li>
-          <li><a href="mailto:info@amadoclinic.pt">info@amadoclinic.pt</a></li>
-          <li>Av. Álvares Cabral, 25A<br>1250-015 Lisboa</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Redes</h4>
-        <ul>
-          <li><a href="#" target="_blank">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>ERS 21417/2022 · © Amado Clinic. Todos os direitos reservados.</span>
-      <span>Desenvolvido com rigor clínico e estratégia de conversão.</span>
-    </div>
-  </div>
-</footer>
 
 <div class="mobile-cta">
   <a href="#marcar" class="btn btn-primary btn-block">Agendar Avaliação Médica</a>
