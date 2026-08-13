@@ -219,6 +219,24 @@
   .modality .mi{font-family:var(--heading);color:var(--bronze);font-size:15px;flex-shrink:0;width:24px;}
   .modality span{font-size:15px;color:var(--ink);font-weight:500;}
   .modalities-note{font-size:13px;color:var(--ink-soft);margin-top:16px;font-style:italic;}
+  .whatis-img{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-soft);aspect-ratio:4/3;margin-top:28px;}
+  .whatis-img img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--paper);}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:10px;}
+  .service-card{padding:32px 28px;background:#fff;border:1px solid var(--line);border-radius:8px;transition:box-shadow .35s ease,transform .35s ease;}
+  .service-card:hover{box-shadow:var(--shadow-soft);transform:translateY(-3px);}
+  .service-card .sv-mark{width:26px;height:1px;background:var(--bronze);margin-bottom:18px;}
+  .service-card h3{font-size:17.5px;margin-bottom:10px;}
+  .service-card p{font-size:14px;}
+
+  /* ---------- AVALIAÇÃO MÉDICA ---------- */
+  .eval-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
+  .eval-img{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lift);aspect-ratio:4/5;}
+  .eval-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  .eval-price{font-family:var(--heading);font-size:clamp(30px,3.6vw,40px);color:var(--ink);margin:18px 0 10px;font-weight:400;}
+  .eval-note{font-size:14.5px;color:var(--ink-soft);margin-bottom:28px;}
 
   /* ---------- RESULTS GALLERY ---------- */
   .results{background:var(--paper);}
@@ -325,6 +343,8 @@
     .principles-grid{grid-template-columns:repeat(3,1fr);}
     .whatis-grid{grid-template-columns:1fr;gap:40px;}
     .cont-grid{grid-template-columns:1fr;gap:36px;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .eval-grid{grid-template-columns:1fr;gap:36px;}
     .doctor-grid{grid-template-columns:1fr;gap:36px;}
     .loc-grid{grid-template-columns:1fr;gap:36px;}
     .book-grid{grid-template-columns:1fr;gap:44px;}
@@ -343,6 +363,7 @@
     .logo small{display:none;}
     .header-cta .btn{padding:10px 14px;font-size:9.5px;letter-spacing:.04em;}
     .principles-grid{grid-template-columns:1fr;gap:34px;}
+    .services-grid{grid-template-columns:1fr;}
     .flow-step{flex:0 0 50%;margin-bottom:20px;}
     .results-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto;}
     .field-row{grid-template-columns:1fr;}
@@ -362,6 +383,7 @@
   <div class="header-inner">
     <a href="#topo" class="logo">AMADO CLINIC<small>MEDICINA ESTÉTICA FACIAL</small></a>
     <nav>
+      <a href="#servicos">Serviços</a>
       <a href="#amadoface">Amado Face®</a>
       <a href="#filosofia">Filosofia</a>
       <a href="#resultados">Resultados</a>
@@ -381,9 +403,67 @@
     <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <a href="#amadoface" class="scroll-cue" aria-label="Descer">
+  <a href="#servicos" class="scroll-cue" aria-label="Descer">
     <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M5 9l7 7 7-7"/></svg>
   </a>
+</section>
+
+<!-- Os Nossos Serviços -->
+<section class="section services" id="servicos">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Os Nossos Serviços</span>
+      <h2>Estética Médica.</h2>
+      <p>Um conjunto de tratamentos que só devem ser considerados após uma avaliação médica individual, que identifica quais se aplicam a cada caso.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="sv-mark"></div>
+        <h3>Botox®</h3>
+        <p>Indicado para suavizar linhas de expressão e reduzir a contração de determinados músculos, preservando a naturalidade e a expressão facial.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sv-mark"></div>
+        <h3>Ácido Hialurónico</h3>
+        <p>Substância naturalmente presente no organismo, utilizada para restaurar ou melhorar volumes, contornos e proporções faciais de forma personalizada.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sv-mark"></div>
+        <h3>Rejuvenescimento Labial</h3>
+        <p>Abordagem personalizada para melhorar a hidratação, definição e contorno dos lábios, podendo realçar a sua forma e proporção sem comprometer a naturalidade.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sv-mark"></div>
+        <h3>Sculptra®</h3>
+        <p>Bioestimulador à base de ácido poli-L-láctico que estimula progressivamente a produção de colagénio, contribuindo para melhorar firmeza, sustentação e qualidade da pele.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sv-mark"></div>
+        <h3>Radiesse®</h3>
+        <p>Bioestimulador à base de hidroxiapatita de cálcio, utilizado para estimular colagénio e melhorar a firmeza, definição e qualidade dos tecidos, de acordo com a indicação médica.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sv-mark"></div>
+        <h3>Ultraformer III</h3>
+        <p>Tecnologia de ultrassom micro e macrofocado que atua em diferentes profundidades dos tecidos, sendo utilizada para promover firmeza, melhorar o contorno e definir determinadas áreas do rosto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Avaliação Médica -->
+<section class="section eval">
+  <div class="container">
+    <div class="eval-grid">
+      <div class="eval-img reveal"><img src="tratamento-facial-01.jpg" alt="Avaliação médica na Amado Clinic"></div>
+      <div class="reveal">
+        <span class="eyebrow">Avaliação Médica</span>
+        <div class="eval-price">Consulta médica: 80€</div>
+        <p class="eval-note">O valor da consulta é integralmente abatido ao realizar o tratamento.</p>
+        <a href="#marcar" class="btn btn-primary">Agendar Avaliação Médica</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- BLOCO 2 — AMADO FACE® -->
@@ -410,7 +490,7 @@
 <section class="section philosophy" id="filosofia">
   <div class="container">
     <div class="phil-top">
-      <div class="phil-img reveal"><span class="mono">BF</span></div>
+      <div class="phil-img reveal"><img src="atendimento-filosofia-01.jpg" alt="Avaliação médica personalizada na Amado Clinic" style="width:100%;height:100%;object-fit:cover;"></div>
       <div class="reveal">
         <span class="eyebrow">Uma Filosofia de Cuidado</span>
         <h2>Porque cada rosto tem uma história única.</h2>
@@ -490,6 +570,7 @@
           <div class="modality"><span class="mi">—</span><span>Biorevitalização</span></div>
         </div>
         <p class="modalities-note">A integração de cada componente depende sempre da avaliação médica individual.</p>
+        <div class="whatis-img reveal"><img src="produtos-amado-01.jpg" alt="Produtos profissionais utilizados na Amado Clinic"></div>
       </div>
     </div>
   </div>
@@ -618,7 +699,7 @@
 <section class="section continuity">
   <div class="container">
     <div class="cont-grid">
-      <div class="cont-img reveal"><img src="hero-clinic.jpg" alt="Acompanhamento clínico na Amado Clinic"></div>
+      <div class="cont-img reveal"><img src="atendimento-acompanhamento-01.jpg" alt="Acompanhamento clínico na Amado Clinic"></div>
       <div class="reveal">
         <span class="eyebrow">Acompanhamento</span>
         <h2 style="margin:16px 0 22px;">O cuidado continua após o tratamento.</h2>
@@ -638,7 +719,7 @@
       <h2>Dra. Beatriz Fortini.</h2>
     </div>
     <div class="doctor-grid">
-      <div class="doctor-img reveal"><span class="mono">BF</span></div>
+      <div class="doctor-img reveal"><img src="dra-beatriz-fortini.jpg" alt="Dra. Beatriz Fortini, Amado Clinic" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
       <div class="reveal">
         <div class="doctor-role">Médica Dentista</div>
         <div class="doctor-cedula">Cédula Profissional n.º 15385</div>
