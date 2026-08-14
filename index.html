@@ -224,7 +224,10 @@
 
   /* ---------- SERVICES (dropdown) ---------- */
   .services{background:var(--paper);}
-  .svc-wrap{max-width:760px;margin:0 auto;}
+  .svc-split{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
+  .svc-img{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lift);aspect-ratio:4/5;}
+  .svc-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  .svc-wrap{margin-top:26px;}
   .svc-item{border-bottom:1px solid var(--line);}
   .svc-q{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 4px;font-family:var(--heading);font-size:18px;font-weight:500;cursor:pointer;transition:color .3s ease;}
   .svc-q:hover{color:var(--bronze-dark);}
@@ -355,9 +358,9 @@
   /* ---------- MOTION ---------- */
   nav a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:currentColor;transition:width .3s ease;}
   nav a:hover::after{width:100%;}
-  .phil-img,.cont-img,.doctor-img,.whatis-img,.loc-img,.result-card .img-wrap{overflow:hidden;}
-  .phil-img img,.cont-img img,.doctor-img img,.whatis-img img,.loc-img img,.result-card img{transition:transform .7s cubic-bezier(.2,.8,.2,1);}
-  .phil-img:hover img,.cont-img:hover img,.doctor-img:hover img,.whatis-img:hover img,.loc-img:hover img,.result-card:hover img{transform:scale(1.045);}
+  .phil-img,.cont-img,.doctor-img,.whatis-img,.loc-img,.svc-img,.result-card .img-wrap{overflow:hidden;}
+  .phil-img img,.cont-img img,.doctor-img img,.whatis-img img,.loc-img img,.svc-img img,.result-card img{transition:transform .7s cubic-bezier(.2,.8,.2,1);}
+  .phil-img:hover img,.cont-img:hover img,.doctor-img:hover img,.whatis-img:hover img,.loc-img:hover img,.svc-img:hover img,.result-card:hover img{transform:scale(1.045);}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:980px){
@@ -365,6 +368,7 @@
     .principles-grid{grid-template-columns:repeat(3,1fr);}
     .whatis-grid{grid-template-columns:1fr;gap:40px;}
     .cont-grid{grid-template-columns:1fr;gap:36px;}
+    .svc-split{grid-template-columns:1fr;gap:36px;}
     .doctor-grid{grid-template-columns:1fr;gap:36px;}
     .loc-grid{grid-template-columns:1fr;gap:36px;}
     .book-grid{grid-template-columns:1fr;gap:44px;}
@@ -705,35 +709,40 @@
 <!-- Os Nossos Serviços -->
 <section class="section services" id="servicos">
   <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Os Nossos Serviços</span>
-      <h2>Estética Médica.</h2>
-      <p>Um conjunto de tratamentos que só devem ser considerados após uma avaliação médica individual, que identifica quais se aplicam a cada caso.</p>
-    </div>
-    <div class="svc-wrap reveal">
-      <div class="svc-item">
-        <div class="svc-q"><span>Toxina Botulínica</span><span class="plus">+</span></div>
-        <div class="svc-a"><p>Indicado para suavizar linhas de expressão e reduzir a contração de determinados músculos, preservando a naturalidade e a expressão facial.</p></div>
-      </div>
-      <div class="svc-item">
-        <div class="svc-q"><span>Ácido Hialurónico</span><span class="plus">+</span></div>
-        <div class="svc-a"><p>Substância naturalmente presente no organismo, utilizada para restaurar ou melhorar volumes, contornos e proporções faciais de forma personalizada.</p></div>
-      </div>
-      <div class="svc-item">
-        <div class="svc-q"><span>Rejuvenescimento Labial</span><span class="plus">+</span></div>
-        <div class="svc-a"><p>Abordagem personalizada para melhorar a hidratação, definição e contorno dos lábios, podendo realçar a sua forma e proporção sem comprometer a naturalidade.</p></div>
-      </div>
-      <div class="svc-item">
-        <div class="svc-q"><span>Sculptra®</span><span class="plus">+</span></div>
-        <div class="svc-a"><p>Bioestimulador à base de ácido poli-L-láctico que estimula progressivamente a produção de colagénio, contribuindo para melhorar firmeza, sustentação e qualidade da pele.</p></div>
-      </div>
-      <div class="svc-item">
-        <div class="svc-q"><span>Radiesse®</span><span class="plus">+</span></div>
-        <div class="svc-a"><p>Bioestimulador à base de hidroxiapatita de cálcio, utilizado para estimular colagénio e melhorar a firmeza, definição e qualidade dos tecidos, de acordo com a indicação médica.</p></div>
-      </div>
-      <div class="svc-item">
-        <div class="svc-q"><span>Ultraformer III</span><span class="plus">+</span></div>
-        <div class="svc-a"><p>Tecnologia de ultrassom micro e macrofocado que atua em diferentes profundidades dos tecidos, sendo utilizada para promover firmeza, melhorar o contorno e definir determinadas áreas do rosto.</p></div>
+    <div class="svc-split">
+      <div class="svc-img reveal"><img src="tratamento-ultraformer-01.jpg" alt="Tratamento com Ultraformer na Amado Clinic"></div>
+      <div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Os Nossos Serviços</span>
+          <h2>Estética Médica.</h2>
+          <p>Um conjunto de tratamentos que só devem ser considerados após uma avaliação médica individual, que identifica quais se aplicam a cada caso.</p>
+        </div>
+        <div class="svc-wrap reveal">
+          <div class="svc-item">
+            <div class="svc-q"><span>Toxina Botulínica</span><span class="plus">+</span></div>
+            <div class="svc-a"><p>Indicado para suavizar linhas de expressão e reduzir a contração de determinados músculos, preservando a naturalidade e a expressão facial.</p></div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-q"><span>Ácido Hialurónico</span><span class="plus">+</span></div>
+            <div class="svc-a"><p>Substância naturalmente presente no organismo, utilizada para restaurar ou melhorar volumes, contornos e proporções faciais de forma personalizada.</p></div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-q"><span>Rejuvenescimento Labial</span><span class="plus">+</span></div>
+            <div class="svc-a"><p>Abordagem personalizada para melhorar a hidratação, definição e contorno dos lábios, podendo realçar a sua forma e proporção sem comprometer a naturalidade.</p></div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-q"><span>Sculptra®</span><span class="plus">+</span></div>
+            <div class="svc-a"><p>Bioestimulador à base de ácido poli-L-láctico que estimula progressivamente a produção de colagénio, contribuindo para melhorar firmeza, sustentação e qualidade da pele.</p></div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-q"><span>Radiesse®</span><span class="plus">+</span></div>
+            <div class="svc-a"><p>Bioestimulador à base de hidroxiapatita de cálcio, utilizado para estimular colagénio e melhorar a firmeza, definição e qualidade dos tecidos, de acordo com a indicação médica.</p></div>
+          </div>
+          <div class="svc-item">
+            <div class="svc-q"><span>Ultraformer III</span><span class="plus">+</span></div>
+            <div class="svc-a"><p>Tecnologia de ultrassom micro e macrofocado que atua em diferentes profundidades dos tecidos, sendo utilizada para promover firmeza, melhorar o contorno e definir determinadas áreas do rosto.</p></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="eval-row reveal">
