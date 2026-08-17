@@ -209,7 +209,7 @@
 
   /* ---------- O QUE É ---------- */
   .whatis{background:var(--cream);}
-  .whatis-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:70px;align-items:start;}
+  .whatis-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
   .whatis p{font-size:16px;margin-bottom:16px;}
   .modalities{margin-top:8px;}
   .modality{
@@ -219,7 +219,7 @@
   .modality .mi{font-family:var(--heading);color:var(--bronze);font-size:15px;flex-shrink:0;width:24px;}
   .modality span{font-size:15px;color:var(--ink);font-weight:500;}
   .modalities-note{font-size:13px;color:var(--ink-soft);margin-top:16px;font-style:italic;}
-  .whatis-img{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-soft);aspect-ratio:4/3;margin-top:28px;}
+  .whatis-img{border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lift);aspect-ratio:4/5;}
   .whatis-img img{width:100%;height:100%;object-fit:cover;display:block;}
 
   /* ---------- SERVICES (dropdown) ---------- */
@@ -522,13 +522,12 @@
 <section class="section whatis">
   <div class="container">
     <div class="whatis-grid">
+      <div class="whatis-img reveal"><img src="avaliacao-facial-01.jpg" alt="Avaliação e marcação facial na Amado Clinic"></div>
       <div class="reveal">
         <span class="eyebrow">O Que É</span>
         <h2 style="margin:16px 0 24px;">O que é o Amado Face®.</h2>
         <p>O Amado Face® é um plano de acompanhamento contínuo em Medicina Estética Facial, desenvolvido para cuidar do rosto ao longo do tempo através de uma abordagem personalizada, médica e individualizada.</p>
         <p>O objetivo não é alterar a identidade de cada pessoa, mas preservar a harmonia facial e acompanhar as necessidades que surgem ao longo do tempo.</p>
-      </div>
-      <div class="reveal">
         <p style="font-size:14px;letter-spacing:.03em;color:var(--ink);font-weight:600;margin-bottom:0;">O plano poderá integrar, sempre que clinicamente indicado:</p>
         <div class="modalities">
           <div class="modality"><span class="mi">—</span><span>Bioestimuladores de Colagénio ou Ultraformer®</span></div>
@@ -536,7 +535,6 @@
           <div class="modality"><span class="mi">—</span><span>Biorevitalização</span></div>
         </div>
         <p class="modalities-note">A integração de cada componente depende sempre da avaliação médica individual.</p>
-        <div class="whatis-img reveal"><img src="avaliacao-facial-01.jpg" alt="Avaliação e marcação facial na Amado Clinic"></div>
       </div>
     </div>
   </div>
